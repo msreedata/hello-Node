@@ -1,12 +1,6 @@
-FROM centos:centos7
+FROM node:alpine
 
 MAINTAINER inSreeMan@gmail.com
-
-# Enable EPEL for Node.js
-RUN yum install epel-release -y
-
-# Install Node...
-RUN yum install -y npm
 
 # Copy app to /src
 COPY . /src
