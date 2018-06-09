@@ -1,9 +1,13 @@
 #!/bin/bash
+:' Run below lines manually first
+
 cd $HOME
 mkdir -p dockerstore
 cd dockerstore/
 git clone https://github.com/msreedata/hello-Node.git
 
+
+'
 
 cd $HOME/dockerstore/hello-Node
 sudo yum -y install docker
