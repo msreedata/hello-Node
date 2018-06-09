@@ -1,5 +1,5 @@
 #!/bin/bash
-:' Run below lines manually first
+:' Run below lines manually first -- this will build the docker image from dockerFile and start the container
 
 cd $HOME
 mkdir -p dockerstore
