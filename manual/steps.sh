@@ -21,15 +21,14 @@ systemctl enable docker
 systemctl status docker
 read -rsp $'Press any key to continue...\n' -n1 key
 
-sudo docker build .
-less Dockerfile
+
+cd $HOME/dockerstore/hello-Node
+git pull
+
+sudo docker build . -t hellonode:v2
 sudo docker image ls
 read -rsp $'Press any key to continue...\n' -n1 key
 
-sudo docker build . -t hellonode:v1
-sudo docker image ls
-read -rsp $'Press any key to continue...\n' -n1 key
-
-sudo docker run --rm -d -p 80:8080 --name hnode1 hellonode:v1
+sudo docker run --rm -d -p 80:80 --name hnode2 hellonode:v2
 sudo docker ps -a
 #
